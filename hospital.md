@@ -1,6 +1,6 @@
 # Hospital coding challenge
 
-We would like to ask you to do a fun coding exercise to have a deeper understanding of your coding skills. Imagine that your code will be read and modified by other developers, so they should be able to understand it easily. You should also remember that code should be easily extensible, maintainable, and scalable but at the same time beware of overly complicated solutions.
+We would like to ask you to do a fun coding exercise to have a deeper understanding of your coding skills. Imagine that your code will be read and modified by other developers, so they should be able to understand it easily. You should also remember that code should be easily extensible, maintainable, and scalable, but at the same time beware of overly complicated solutions.
 
 Last but not least: there is no single best solution, so we encourage you to design and implement the solution in a way you think is right.
 
@@ -42,14 +42,14 @@ Drugs effects are described by the following rules:
   - Paracetamol kills subject if mixed with aspirin.
 
 While applying the rules, please keep in mind that:
-  - During one simulation a patient can change his state only once (only one rule can be applied).
-  - Rules causing Death take precedence over others.
+  - **During one simulation a patient can change his state only once (only one rule can be applied).**
+  - **Rules causing Death take precedence over others.**
 
 ## Part 1. Creating the library *(hospital-lib)*
 
 The goal is here to create a library implementing the specifications mentioned above. We provide you with a basic test file (*quarantine.spec.ts*) for the main test cases. Feel free to enrich it and create other tests for your internal code.
 
-**Important.** Make sure that your solution is easily scalable in term of new patient states and new drugs. Also, make sure that your code is well tested.
+**Reminder.** Make sure that your solution is easily scalable in term of new patient states and new drugs, and extensible to new type of rules. Also, make sure that your code is well tested.
 
 ### Implementation
 
@@ -58,7 +58,7 @@ You need to complete the *Quarantine* class that must provide:
   
     The argument of the constructor is an object describing the states of the patients, following the format: `{F:NP,H:NP,D:NP,T:NP,X:NP}`. Where:
     - F, H, D, T, X are patients’ health status codes;
-    - NP is a number of patients for a given state;
+    - NP is a number of patients for a given state, 0 included;
 
     E.g. `{F:0,H:2,D:0,T:0,X:1}` means there are two healthy patients and one that is dead.
     
@@ -76,8 +76,8 @@ A basic skeleton in TypeScript is provided in the *hospital-lib* folder. You **m
 
 To run the tests, run the following commands in the *hospital-lib* folder:
 
- - `yarn install`
- - `yarn test` - to run the basic predefined tests
+ - `npm install`
+ - `npm test` - to run the basic predefined tests
 
 ## Part 2. Creating the UI *(hospital-fe)*
 
@@ -91,20 +91,41 @@ The hospital owns a small server (*hospital-be* – we provide it) that stores t
   - The last 10 simulations results must be displayed (not more);
   - Everything must be displayed on the same screen.
 
-**Important.** Your solution must be simple yet clear and usable (we value user-friendliness).
+Thinking a UI with good UX is not an easy ask. So we provide a mockup that you can follow. You can modify at your own discretion. In such case, keep in mind that your solution must be simple yet clear and usable (we value user-friendliness).
+
+Mockup:
+
+INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
+INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
+INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
+INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
+INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
+INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
+INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
 
 ## Technical information
 
 Your frontend solution must be stored in the *hospital-fe* folder and must be written in VueJS or AngularX ***if nothing was explicitly defined.***
 
-**Once your frontend is bootstrapped**, in order to use *hospital-lib* in your frontend, you should execute the in the *hospital-lib* folder:
-  - `yarn build:prod`
-  - `yarn link`
+**Once your frontend is bootstrapped**, in order to use *hospital-lib* in your frontend, you should execute the following command in the *hospital-lib* folder:
+  - `npm build:link`
+  - 
+Then in the *hospital-fe* folder add in the dependencies of your *package.json* the following dependency:
 
-Then in the package.json of your project in the folder *hospital-fe*, you should add in the dependencies *"hospital-lib": "1.0.0"*, and then execute the command:
-  - `yarn link hospital-lib`
+```json
+// package.json of your frontend application
+{
+  // ...
+  "dependencies": {
+    // ...
+    "hospital-lib": "file:../hospital-lib"
+    // ...
+  },
+  // ...
+}
+```
   
-Now, in your source files, you can use the *hospital-lib* using:
+Now, run again `npm install` in your project, and you should be able to *hospital-lib* like this:
 
 `import {Quarantine} from 'hospital-lib';`
 
@@ -112,8 +133,8 @@ Now, in your source files, you can use the *hospital-lib* using:
 
 To run the server, execute the following commands in the hospital-be folder:
 
-  - `yarn install`
-  - `yarn start`
+  - `npm install`
+  - `npm start`
 
 The server is then accessible through the url http://localhost:7200. It provides two endpoints (the formats follow the ones given in the test file of the library implemented in part 1):
 
@@ -143,3 +164,14 @@ If you find this exercise cool and still have time to spend, here are two improv
   </dd>
 </dl>
 
+Here the mockup for the optional part
+Here the mockup for the optional part
+Here the mockup for the optional part
+Here the mockup for the optional part
+Here the mockup for the optional part
+Here the mockup for the optional part
+Here the mockup for the optional part
+Here the mockup for the optional part
+Here the mockup for the optional part
+Here the mockup for the optional part
+Here the mockup for the optional part

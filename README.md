@@ -2,7 +2,7 @@
 
 ## Installation
 
-Make sur to have yarn installed.
-(Has not been tested with NPM, but should work also.)
+The project is compatible with NPM 16.
+It was not tested with previous version.
 
-All instructions are in the hospital.pdf
+All instructions are in the [hospital.md](hospital.md) file.
