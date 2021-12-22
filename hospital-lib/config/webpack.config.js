@@ -2,9 +2,12 @@ module.exports = {
     entry: './src/index.ts',
     output: {
         filename: 'index.js',
-        library: 'hospitalLib',
-        libraryTarget: 'umd',
-        umdNamedDefine: true
+        library: {
+            type: 'module',
+        }
+    },
+    experiments: {
+        outputModule: true,
     },
     resolve: {
         extensions: ['.ts']
