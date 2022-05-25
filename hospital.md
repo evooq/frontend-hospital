@@ -98,7 +98,7 @@ Your frontend solution must be stored in the *hospital-fe* folder and must be wr
 **Once your frontend is bootstrapped**, in order to use *hospital-lib* in your frontend, you should execute the following command in the *hospital-lib* folder:
 
 ```
-npm build:prod
+npm run build:prod
 ```
 
 Then in the *hospital-fe* folder add in the dependencies of your *package.json* the following dependency:
