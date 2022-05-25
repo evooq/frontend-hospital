@@ -158,7 +158,7 @@ If you find this exercise cool and still have time to spend, here are two improv
 
 ## Idea of design
 
-Thinking a UI with good UX is not an easy ask. You can get some inspiration from the image below. This design is just an indication, and you can modify at your own discretion. In such case, keep in mind that your solution must be simple yet clear and usable (we value user-friendliness).
+Thinking a UI with good UX is not an easy task. You can get some inspiration from the image below. This design is just here as an indication, and you can modify your UI at your own discretion. In such case, keep in mind that your solution must be simple yet clear and usable (we value user-friendliness).
 
 ![alt text](./mockup.png "Mockup")
 
