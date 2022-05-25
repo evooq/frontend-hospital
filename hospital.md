@@ -91,25 +91,16 @@ The hospital owns a small server (*hospital-be* – we provide it) that stores t
   - The last 10 simulations results must be displayed (not more);
   - Everything must be displayed on the same screen.
 
-Thinking a UI with good UX is not an easy ask. So we provide a mockup that you can follow. You can modify at your own discretion. In such case, keep in mind that your solution must be simple yet clear and usable (we value user-friendliness).
-
-Mockup:
-
-INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
-INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
-INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
-INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
-INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
-INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
-INSERTTTTTT MOCKKKKKKK UPPPPPPP HERER
-
 ## Technical information
 
 Your frontend solution must be stored in the *hospital-fe* folder and must be written in VueJS or AngularX ***if nothing was explicitly defined.***
 
 **Once your frontend is bootstrapped**, in order to use *hospital-lib* in your frontend, you should execute the following command in the *hospital-lib* folder:
-  - `npm build:link`
-  - 
+
+```
+npm build:prod
+```
+
 Then in the *hospital-fe* folder add in the dependencies of your *package.json* the following dependency:
 
 ```json
@@ -124,10 +115,10 @@ Then in the *hospital-fe* folder add in the dependencies of your *package.json* 
   // ...
 }
 ```
-  
+
 Now, run again `npm install` in your project, and you should be able to *hospital-lib* like this:
 
-`import {Quarantine} from 'hospital-lib';`
+`import { Quarantine } from 'hospital-lib';`
 
 ## Using the Hospital server *(hospital-be)*
 
@@ -164,14 +155,12 @@ If you find this exercise cool and still have time to spend, here are two improv
   </dd>
 </dl>
 
-Here the mockup for the optional part
-Here the mockup for the optional part
-Here the mockup for the optional part
-Here the mockup for the optional part
-Here the mockup for the optional part
-Here the mockup for the optional part
-Here the mockup for the optional part
-Here the mockup for the optional part
-Here the mockup for the optional part
-Here the mockup for the optional part
-Here the mockup for the optional part
+
+## Idea of design
+
+Thinking a UI with good UX is not an easy ask. You can get some inspiration from the image below. This design is just an indication, and you can modify at your own discretion. In such case, keep in mind that your solution must be simple yet clear and usable (we value user-friendliness).
+
+![alt text](./mockup.png "Mockup")
+
+As indicated in the image, the orange parts are optionnal. For the patients card, there should be either the number of patients in plain text,
+or an input where the user can enter a value, should you choose to do this optionnal part. Clicking on the button to fetch data should fill this input.
