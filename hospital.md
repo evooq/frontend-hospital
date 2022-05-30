@@ -116,7 +116,7 @@ Then in the *hospital-fe* folder add in the dependencies of your *package.json* 
 }
 ```
 
-Now, run again `npm install` in your project, and you should be able to *hospital-lib* like this:
+Now, run again `npm install` in your project, and you should be able to use *hospital-lib* like this:
 
 `import { Quarantine } from 'hospital-lib';`
 
